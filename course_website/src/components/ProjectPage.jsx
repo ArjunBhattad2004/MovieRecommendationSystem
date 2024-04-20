@@ -9,6 +9,15 @@ import krishna from "./images/team_member_4.jpg"
 import report from "./images/researchPaper.jpg"
 import image4 from "./images/image4.png"
 import demo from "./images/demo.jpg"
+import reportPage from "./images/reportPage.jpg"
+import cosineHeat from "./images/cosine_heatmap.png"
+import cosinePred from "./images/Cosine_pred.png"
+import genres from "./images/genres.png"
+import genrePCA from "./images/genres_pca.png"
+import linkedin from "./images/linkedinLogo.png"
+import github from "./images/githubLogo.png"
+
+
 export default function ProjectPage(props) {
     const members = [
         { name: 'Aditya Sahani', imgSrc: aditya },
@@ -16,6 +25,23 @@ export default function ProjectPage(props) {
         { name: 'Raunak Singh', imgSrc: raunak },
         { name: 'Krishna Chaudhary', imgSrc: krishna}
     ];
+
+    const carouselImage =[
+        { imgSrc:genrePCA},
+        { imgSrc:demo},
+        { imgSrc:image4},
+        { imgSrc:genres},
+        { imgSrc:cosineHeat}
+    ]
+
+    const allReferences =[
+        { author:"Serrano.Academy (2018)." , description:"How does Netflix recommend movies? Matrix Factorization" , link:"https://www.youtube.com/watch?v=ZspR5PZemcs"},
+        { author:"Al Bakri, Nadia & Hashem, Soukaena. (2019)." , description:"Collaborative Filtering Recommendation Model Based on k-means Clustering. Al-Nahrain Journal of Science. 22. 74-79. 10.22401/ANJS.22.1.10.", link:"https://www.researchgate.net/publication/332579725_Collaborative_Filtering_Recommendation_Model_Based_on_k-means_Clustering"},
+        { author:"Jackson Wu(2019)." , description:"Improving Collaborative Filtering With Clustering", link:"https://medium.com/@jwu2/improving-collaborative-filtering-with-clustering-88c63bdae7cc"},
+        { author:"Ramya Vidiyala(2020)." , description:"How to Build a Movie Recommendation System",link:"https://towardsdatascience.com/how-to-build-a-movie-recommendation-system-67e321339109"},
+        { author:"Sciforce(2021)." , description:"Deep Learning Based Recommender Systems",link:"https://medium.com/sciforce/deep-learning-based-recommender-systems-b61a5ddd5456"},
+        { author:"Shuai Zhang, Lina Yao, Aixin Sun, and Yi Tay. 2018." , description:"Deep Learning based Recommender System: A Survey and New Perspectives. ACM Comput. Surv. 1, 1, Article 1 (July 2018), 35 pages. DOI: 0000001.0000001" , link:"https://arxiv.org/pdf/1707.07435.pdf"}
+    ]
     const projectDescription = "Movie recommendation systems have become integral parts of modern streaming platforms, aiding users in discovering content tailored to their preferences. In this project, we present a hybrid recommendation system that combines collaborative and content-based filtering techniques to enhance movie recommendations. Collaborative filtering leverages user-item interaction data to identify similar users and recommend items based on their preferences, while content-based filtering analyzes movie attributes to suggest items with similar characteristics. By integrating these approaches, our system provides personalized recommendations that consider both user preferences and movie features. We implement and evaluate the system using a dataset comprising user ratings and movie metadata. Our results demonstrate the effectiveness of the hybrid approach in enhancing recommendation quality compared to individual filtering methods, showcasing its potential for improving user satisfaction and engagement in movie recommendation applications.";
 
     const problemDescription = "The challenge lies in developing an accurate movie recommendation system that can effectively cater to diverse user preferences. Traditional recommendation systems often rely solely on either collaborative filtering, which considers user-item interactions, or content-based filtering, which analyzes movie attributes. However, these approaches may overlook crucial aspects of user preferences or movie features, leading to suboptimal recommendations."
@@ -26,7 +52,7 @@ export default function ProjectPage(props) {
 
     return (
         // Course Website heading added
-        <div className="container mx-auto text-center font-serif">
+        <div className="container mx-auto text-center font-sans">
             <p className="mb-10 text-6xl font-bold">Movie Recommendation System</p>
             <div className="links mb-10 text-2xl">
                 <span><a href="#paper">Report</a> | </span>
@@ -38,20 +64,15 @@ export default function ProjectPage(props) {
             <div className="carousel-container border border-gray-300 rounded-lg overflow-hidden h-30 mb-8">
                 <Carousel showThumbs={false} transitionTime={1000} showStatus={false} infiniteLoop={true} autoPlay={true}
                 >
-                    <div>
-                        <img
-                            className="block w-full pb-12"
-                            src={demo}
-                            alt="First slide"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            className="block w-full"
-                            src={image4}
-                            alt="Second slide"
-                        />
-                    </div>
+                    {carouselImage.map((img, index) => (
+                        <div>
+                            <img
+                            className='block w-full pb-12'
+                            src={img.imgSrc}
+                            />
+                        </div>
+                    ))}
+
                 </Carousel>
             </div>
             {/* Carousel ended */}
@@ -92,7 +113,7 @@ export default function ProjectPage(props) {
                     <div className="flex flex-col flex-grow">
                         <div className="relative h-64 w-64">
                             <img
-                            src={report}
+                            src={reportPage}
                             alt="Report"
                             className="object-contain w-full h-full rounded-lg"
                             />
@@ -109,14 +130,32 @@ export default function ProjectPage(props) {
               <p className="mb-10 text-3xl font-bold">Team</p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {members.map((member, index) => (
-                        <div key={index} className="text-center  ">
+                        <div key={index} className="text-center">
                             <div className="bg-white rounded-lg shadow-md p-4 border">
                                 <img src={member.imgSrc} alt={member.name} className="w-36 h-36 mx-auto mb-5 rounded-full" />
                                 <p className="mb-1">{member.name}</p>
+                                <img
+                                src={github}
+                                className='h-10  rounded-full ml-2 mt-2 inline-block'
+                                />
+                                <img
+                                src={linkedin}
+                                className='h-10 rounded-full ml-5 mt-2 inline-block'
+                                />
                             </div>
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="bg-gray-100 p-8 rounded-lg shadow-lg ">
+                <h2 className="text-3xl font-bold mb-4 text-left pl-7">References</h2>
+                <ul className="list-disc ml-8 text-left">
+                    {allReferences.map((reference, index) => (
+                        <div className='mb-2'>
+                            <a href = {reference.link} className="mb-1"><b>[{index+1}]</b> {reference.author} "{reference.description}"</a>
+                        </div>
+                    ))}
+                </ul>
             </div>
 
         </div>
