@@ -6,27 +6,35 @@ import aditya from "./images/team_member_1.jpg"
 import arjun from "./images/team_member_2.jpg"
 import raunak  from "./images/team_member_3.jpg"
 import krishna from "./images/team_member_4.jpg"
-import report from "./images/researchPaper.jpg"
 import image4 from "./images/image4.png"
 import demo from "./images/demo.jpg"
+import reportPage from "./images/reportPage.jpg"
+import cosineHeat from "./images/cosine_heatmap.png"
+import genres from "./images/genres.png"
+import genrePCA from "./images/genres_pca.png"
+import linkedin from "./images/linkedinLogo.png"
+import github from "./images/githubLogo.png"
+
+
 export default function ProjectPage(props) {
     const members = [
-        { name: 'Aditya Sahani', imgSrc: aditya },
-        { name: 'Arjun Bhattad', imgSrc: arjun },
-        { name: 'Raunak Singh', imgSrc: raunak },
-        { name: 'Krishna Chaudhary', imgSrc: krishna}
+        { name: 'Aditya Sahani', imgSrc: aditya ,github:'https://github.com/sahaniaditya' ,linkedin:'https://www.linkedin.com/in/aditya-sahani/'},
+        { name: 'Arjun Bhattad', imgSrc: arjun,github:'https://github.com/ArjunBhattad2004' ,linkedin:'https://www.linkedin.com/in/arjun-bhattad-095710255/' },
+        { name: 'Raunak Singh', imgSrc: raunak ,github:'https://github.com/RaunakSingh0312',linkedin:'https://www.linkedin.com/in/raunak-singh-16a48725a/'},
+        { name: 'Krishna Chaudhary', imgSrc: krishna ,github:'https://github.com/krishuraj05',linkedin:'https://www.linkedin.com/in/krishna-chaudhary-b1b984256/'}
     ];
-    const projectDescription = "Movie recommendation systems have become integral parts of modern streaming platforms, aiding users in discovering content tailored to their preferences. In this project, we present a hybrid recommendation system that combines collaborative and content-based filtering techniques to enhance movie recommendations. Collaborative filtering leverages user-item interaction data to identify similar users and recommend items based on their preferences, while content-based filtering analyzes movie attributes to suggest items with similar characteristics. By integrating these approaches, our system provides personalized recommendations that consider both user preferences and movie features. We implement and evaluate the system using a dataset comprising user ratings and movie metadata. Our results demonstrate the effectiveness of the hybrid approach in enhancing recommendation quality compared to individual filtering methods, showcasing its potential for improving user satisfaction and engagement in movie recommendation applications.";
 
-    const problemDescription = "The challenge lies in developing an accurate movie recommendation system that can effectively cater to diverse user preferences. Traditional recommendation systems often rely solely on either collaborative filtering, which considers user-item interactions, or content-based filtering, which analyzes movie attributes. However, these approaches may overlook crucial aspects of user preferences or movie features, leading to suboptimal recommendations."
-
-    const solutionDescription = "In our project, we tackle this problem by employing collaborative, content-based and hybrid filtering techniques. Collaborative filtering analyzes user-item interaction data to identify similar users and recommend movies based on their preferences. Meanwhile, content-based filtering examines movie attributes to suggest items with similar characteristics. By applying both filtering methods, we aim to provide a more comprehensive range of recommendations that cater to different aspects of user preferences and movie features, thereby enhancing the overall quality and relevance of movie recommendations."
-
-    const videoId = "v90un9ALRzw";
+    const carouselImage =[
+        { imgSrc:genrePCA},
+        { imgSrc:demo},
+        { imgSrc:image4},
+        { imgSrc:genres},
+        { imgSrc:cosineHeat}
+    ]
 
     return (
         // Course Website heading added
-        <div className="container mx-auto text-center font-serif">
+        <div className="container mx-auto text-center font-sans">
             <p className="mb-10 text-6xl font-bold">Movie Recommendation System</p>
             <div className="links mb-10 text-2xl">
                 <span><a href="#paper">Report</a> | </span>
@@ -38,32 +46,27 @@ export default function ProjectPage(props) {
             <div className="carousel-container border border-gray-300 rounded-lg overflow-hidden h-30 mb-8">
                 <Carousel showThumbs={false} transitionTime={1000} showStatus={false} infiniteLoop={true} autoPlay={true}
                 >
-                    <div>
-                        <img
-                            className="block w-full pb-12"
-                            src={demo}
-                            alt="First slide"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            className="block w-full"
-                            src={image4}
-                            alt="Second slide"
-                        />
-                    </div>
+                    {carouselImage.map((img, index) => (
+                        <div>
+                            <img
+                            className='block w-full pb-12'
+                            src={img.imgSrc}
+                            />
+                        </div>
+                    ))}
+
                 </Carousel>
             </div>
             {/* Carousel ended */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left ">
                 <div className="description mb-8">
                     <h2 className="text-2xl font-bold mb-4">Abstract</h2>
-                    <p>{projectDescription}</p>
+                    <p>{props.projectDescription}</p>
                 </div>
                 <div className="video-container mb-8 text-center">
                     <h2 className="text-2xl font-bold mb-4 ">Spotlight Video</h2>
                     <div className="aspect-w-16 aspect-h-9">
-                        <YouTube videoId={videoId} />
+                        <YouTube videoId={props.videoId} />
                     </div>
                 </div>
             </div>
@@ -77,22 +80,23 @@ export default function ProjectPage(props) {
                     alt="problemStatement"
                     />
                 </div>
-                <p>{problemDescription}</p>
-                <p className="my-5">{solutionDescription}</p>
+                <p>{props.problemDescription}</p>
+                <p className="my-5">{props.solutionDescription}</p>
             </div>
 
             <p className='text-left text-3xl mb-6 font-bold'>Report</p>
 
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center ">
                 <div className="max-w-screen-lg bg-gray-100 rounded-lg shadow-lg p-8 flex">
                     <div className="flex flex-col justify-center ">
-                        <h2 className="text-xl font-semibold mb-4">A Movie Recommendation system using content and collaborative based filtering</h2>
+                        <h2 className="text-xl font-bold mb-4">Machine Learning Approaches for Effective
+                        Movie Recommendations: A Comprehensive Study</h2>
                     </div>
                     
                     <div className="flex flex-col flex-grow">
                         <div className="relative h-64 w-64">
                             <img
-                            src={report}
+                            src={reportPage}
                             alt="Report"
                             className="object-contain w-full h-full rounded-lg"
                             />
@@ -109,16 +113,37 @@ export default function ProjectPage(props) {
               <p className="mb-10 text-3xl font-bold">Team</p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {members.map((member, index) => (
-                        <div key={index} className="text-center  ">
+                        <div key={index} className="text-center">
                             <div className="bg-white rounded-lg shadow-md p-4 border">
                                 <img src={member.imgSrc} alt={member.name} className="w-36 h-36 mx-auto mb-5 rounded-full" />
                                 <p className="mb-1">{member.name}</p>
+                                <a href={member.github}>
+                                    <img
+                                    src={github}
+                                    className='h-10  rounded-full ml-2 mt-2 inline-block'
+                                    />
+                                </a>
+                                <a href={member.linkedin}>
+                                    <img
+                                    src={linkedin}
+                                    className='h-10 rounded-full ml-5 mt-2 inline-block'
+                                    />
+                                </a>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-
+            <div className="bg-gray-100 p-8 rounded-lg shadow-lg ">
+                <h2 className="text-3xl font-bold mb-4 text-left pl-7">References</h2>
+                <ul className="list-disc ml-8 text-left">
+                    {props.allReferences.map((reference, index) => (
+                        <div className='mb-2'>
+                            <a href = {reference.link} className="mb-1"><b>[{index+1}]</b> {reference.author} "{reference.description}"</a>
+                        </div>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }
