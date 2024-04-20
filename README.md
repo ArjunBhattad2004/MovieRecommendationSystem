@@ -1,10 +1,12 @@
 # MovieRecommendationSystem
 This project explores various machine learning techniques to develop a comprehensive movie recommendation system. We integrate content-based, collaborative filtering, and hybrid models to offer personalized movie recommendations tailored to individual user preferences.
 
+#### Report : https://www.overleaf.com/project/6622841cf4477ae9db233cbb
+
 #### Abstract
 Our recommendation system leverages state-of-the-art machine learning and natural language processing algorithms to analyze movie features such as genre, director, and synopsis. Through extensive experimentation and evaluation, we optimize the system's performance considering metrics such as accuracy, diversity, and scalability. The deployed system offers a user-friendly interface for discovering relevant movies based on user preferences and browsing history.
 
-####Table of Contents
+#### Table of Contents
 Introduction
 Background
 Objectives
