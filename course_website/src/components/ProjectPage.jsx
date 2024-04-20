@@ -81,6 +81,8 @@ export default function ProjectPage(props) {
                 <p className="my-5">{solutionDescription}</p>
             </div>
             {/* Problem Description */}
+
+            {/* About Section Added */}
             <p className='text-left text-3xl mb-6 font-bold'>Report</p>
 
             <div className="flex items-center justify-center">
