@@ -34,7 +34,7 @@ export default function ProjectPage(props) {
                 <span><a href="https://github.com/sahaniaditya/MovieRecommendationSystem/tree/main/dataset">Dataset</a> | </span>
                 <span><a href="https://github.com/sahaniaditya/MovieRecommendationSystem/tree/main/demo_website">Demonstration</a></span>
             </div>
-            
+            {/* Carousel added */}
             <div className="carousel-container border border-gray-300 rounded-lg overflow-hidden h-30 mb-8">
                 <Carousel showThumbs={false} transitionTime={1000} showStatus={false} infiniteLoop={true} autoPlay={true}
                 >
@@ -54,7 +54,7 @@ export default function ProjectPage(props) {
                     </div>
                 </Carousel>
             </div>
-
+            {/* Carousel ended */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left ">
                 <div className="description mb-8">
                     <h2 className="text-2xl font-bold mb-4">Abstract</h2>
