@@ -20,9 +20,12 @@ function App() {
 
   const videoId = "v90un9ALRzw";
 
+  const acknowledgement = "This work is done as course project for the course Pattern Recognition and Machine Learning CSL[2050], IIT Jodhpur under Prof. Anand Mishra.";
+
+
   return (
     <>
-      <ProjectPage allReferences={allReferences} projectDescription={projectDescription} solutionDescription={solutionDescription} problemDescription={problemDescription}  videoId={videoId}/>
+      <ProjectPage allReferences={allReferences} projectDescription={projectDescription} solutionDescription={solutionDescription} problemDescription={problemDescription} videoId={videoId} acknowledgement={acknowledgement}/>
     </>
   );
 }

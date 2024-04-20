@@ -25,11 +25,10 @@ export default function ProjectPage(props) {
     ];
 
     const carouselImage =[
-        { imgSrc:genrePCA},
         { imgSrc:demo},
+        { imgSrc:cosineHeat},
         { imgSrc:image4},
-        { imgSrc:genres},
-        { imgSrc:cosineHeat}
+        { imgSrc:genres}
     ]
 
     return (
@@ -43,20 +42,24 @@ export default function ProjectPage(props) {
                 <span><a href="https://github.com/sahaniaditya/MovieRecommendationSystem/tree/main/demo_website">Demonstration</a></span>
             </div>
             {/* Carousel added */}
-            <div className="carousel-container border border-gray-300 rounded-lg overflow-hidden h-30 mb-8">
-                <Carousel showThumbs={false} transitionTime={1000} showStatus={false} infiniteLoop={true} autoPlay={true}
-                >
+            <div className="carousel-container border border-gray-300 rounded-lg overflow-hidden mb-8 w-3/4 mx-auto">
+                <Carousel showThumbs={false} transitionTime={1000} showStatus={false} infiniteLoop={true} autoPlay={true}>
                     {carouselImage.map((img, index) => (
-                        <div>
-                            <img
-                            className='block w-full pb-12'
-                            src={img.imgSrc}
-                            />
+                        <div key={index} className="flex items-center justify-center mt-5">
+                            <div className="w-4/5">
+                                <img
+                                    src={img.imgSrc}
+                                    alt="slides"
+                                    className="object-cover w-full h-auto rounded-lg"
+                                />
+                            </div>
                         </div>
                     ))}
-
                 </Carousel>
             </div>
+
+
+
             {/* Carousel ended */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left ">
                 <div className="description mb-8">
@@ -75,7 +78,7 @@ export default function ProjectPage(props) {
                 <h2 className="text-4xl font-bold mb-4">Problem Description</h2>
                 <div className="border mb-5">
                     <img
-                    className="block w-full"
+                    className="block w-10/12 mx-auto"
                     src={image4}
                     alt="problemStatement"
                     />
@@ -134,7 +137,7 @@ export default function ProjectPage(props) {
                     ))}
                 </div>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-lg ">
+            <div className="bg-gray-100 p-8 rounded-lg shadow-lg mb-8">
                 <h2 className="text-3xl font-bold mb-4 text-left pl-7">References</h2>
                 <ul className="list-disc ml-8 text-left">
                     {props.allReferences.map((reference, index) => (
@@ -143,6 +146,15 @@ export default function ProjectPage(props) {
                         </div>
                     ))}
                 </ul>
+            </div>
+            <div className="problem-statement text-left mb-8">
+                <h2 className="text-4xl font-bold mb-4">Acknowledgement</h2>
+                <p className="my-5">{props.acknowledgement}</p>
+            </div>
+
+            <div className="problem-statement text-left mb-8">
+                <h2 className="text-4xl font-bold mb-4">Contact</h2>
+                <p className="my-5">For any queries contact <a href = "https://github.com/sahaniaditya"><u>Aditya Sahani</u></a> or raise issue on <a href="https://github.com/sahaniaditya/MovieRecommendationSystem"><u>Github</u></a></p>
             </div>
         </div>
     );
