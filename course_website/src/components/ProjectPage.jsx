@@ -67,7 +67,7 @@ export default function ProjectPage(props) {
                     </div>
                 </div>
             </div>
-
+            {/* Youtube Video  */}
             <div className="problem-statement text-left mb-8">
                 <h2 className="text-4xl font-bold mb-4">Problem Description</h2>
                 <div className="border mb-5">
@@ -80,7 +80,7 @@ export default function ProjectPage(props) {
                 <p>{problemDescription}</p>
                 <p className="my-5">{solutionDescription}</p>
             </div>
-
+            {/* Problem Description */}
             <p className='text-left text-3xl mb-6 font-bold'>Report</p>
 
             <div className="flex items-center justify-center">
