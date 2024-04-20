@@ -25,6 +25,7 @@ export default function ProjectPage(props) {
     const videoId = "v90un9ALRzw";
 
     return (
+        // Course Website heading added
         <div className="container mx-auto text-center font-serif">
             <p className="mb-10 text-6xl font-bold">Movie Recommendation System</p>
             <div className="links mb-10 text-2xl">
