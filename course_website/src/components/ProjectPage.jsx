@@ -108,7 +108,7 @@ export default function ProjectPage(props) {
                         </div>
                     
                         <div className="bg-white p-4 rounded-b-lg mt-2">
-                            <a className="text-lg font-semibold">[Report]</a>
+                            <a href={props.reportLink} className="text-lg font-semibold"><u>[Report]</u></a>
                         </div>
                     </div>
                 </div>
