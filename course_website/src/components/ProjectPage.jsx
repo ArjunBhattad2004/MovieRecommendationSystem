@@ -85,6 +85,15 @@ export default function ProjectPage(props) {
                 </div>
                 <p>{props.problemDescription}</p>
                 <p className="my-5">{props.solutionDescription}</p>
+                <p className='mb-3 text-2xl'><b>Approaches Tried</b> </p>
+                
+                <li className='mb-2'><b>Content-Based Filtering</b>: We analyze movie attributes such as genre, cast, and director to recommend similar movies based on their content characteristics. Techniques like cosine similarity and Jaccard similarity are employed for this purpose.</li>
+                        
+                <li className='mb-2'><b>Collaborative Filtering</b>
+                : We recommend items based on the preferences of other users, leveraging user-item interactions to identify users with similar tastes and preferences. Methods such as matrix factorization and nearest neighbors are utilized in collaborative filtering.</li>
+
+                <li><b>Hybrid Filtering</b>: 
+                Our hybrid model combines the strengths of both content-based and collaborative filtering methods to enhance recommendation accuracy and coverage. Techniques like cosine similarity and matrix factorization are integrated to provide comprehensive recommendations.</li>
             </div>
             {/* Problem Description */}
 
@@ -108,7 +117,7 @@ export default function ProjectPage(props) {
                         </div>
                     
                         <div className="bg-white p-4 rounded-b-lg mt-2">
-                            <a className="text-lg font-semibold">[Report]</a>
+                            <a href={props.reportLink} className="text-lg font-semibold"><u>[Report]</u></a>
                         </div>
                     </div>
                 </div>
