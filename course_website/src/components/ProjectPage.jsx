@@ -27,7 +27,7 @@ export default function ProjectPage(props) {
     const carouselImage =[
         { imgSrc:demo},
         { imgSrc:cosineHeat},
-        { imgSrc:image4},
+        { imgSrc:genrePCA},
         { imgSrc:genres}
     ]
 

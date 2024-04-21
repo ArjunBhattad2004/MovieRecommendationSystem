@@ -18,7 +18,7 @@ function App() {
   
   const solutionDescription = "In our project, we tackle this problem by employing collaborative, content-based and hybrid filtering techniques. Collaborative filtering analyzes user-item interaction data to identify similar users and recommend movies based on their preferences. Meanwhile, content-based filtering examines movie attributes to suggest items with similar characteristics. By applying both filtering methods, we aim to provide a more comprehensive range of recommendations that cater to different aspects of user preferences and movie features, thereby enhancing the overall quality and relevance of movie recommendations."
 
-  const videoId = "v90un9ALRzw";
+  const videoId = "Mw689kZd_LI";
 
   const acknowledgement = "This work is done as course project for the course Pattern Recognition and Machine Learning CSL[2050], IIT Jodhpur under Prof. Anand Mishra.";
 
