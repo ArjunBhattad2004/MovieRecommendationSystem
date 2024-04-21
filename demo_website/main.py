@@ -96,8 +96,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p> <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">GitHub</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">Website</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://drive.google.com/file/d/1Gp-CGb7ZDTJkOTm91Nl3ND4mnYrbtArJ/view?usp=sharing" target="_blank">Document</a>|
-<a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">Youtube</a>
+<p> <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">GitHub</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://prmlproject.netlify.app/" target="_blank">Website</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://drive.google.com/file/d/1Gp-CGb7ZDTJkOTm91Nl3ND4mnYrbtArJ/view?usp=sharing" target="_blank">Document</a>
 <br>
 Developed by Aditya, Raunak, Krishna and Arjun
 </p>
