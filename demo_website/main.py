@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 from sklearn.metrics.pairwise import cosine_similarity
 
+print(python.__version__)
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=d3c4bc3d77d23d1f7650d02f90a06567&language=en-US".format(movie_id)
     data = requests.get(url)
