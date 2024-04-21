@@ -1,6 +1,7 @@
 import pickle
 import streamlit as st
 import requests
+from sklearn.metrics.pairwise import cosine_similarity
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=d3c4bc3d77d23d1f7650d02f90a06567&language=en-US".format(movie_id)
@@ -31,9 +32,10 @@ st.set_page_config(layout="wide")
 
 st.header('Movie Recommender System')
 movies = pickle.load(open('movies.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
+vector = pickle.load(open('vector.pkl','rb'))
 links = pickle.load(open('links.pkl','rb'))
 main = pickle.load(open('main.pkl','rb'))
+similarity = cosine_similarity(vector)
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
@@ -94,7 +96,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p> <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">GitHub</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">Website</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">Document</a>|
+<p> <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">GitHub</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">Website</a> | <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://drive.google.com/file/d/1Gp-CGb7ZDTJkOTm91Nl3ND4mnYrbtArJ/view?usp=sharing" target="_blank">Document</a>|
 <a style='display: inline-block; text-align: center; color : gray;font-size : 20px;' href="https://github.com/sahaniaditya/MovieRecommendationSystem" target="_blank">Youtube</a>
 <br>
 Developed by Aditya, Raunak, Krishna and Arjun
