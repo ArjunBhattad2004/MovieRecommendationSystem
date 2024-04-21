@@ -36,7 +36,7 @@ export default function ProjectPage(props) {
         <div className="container mx-auto text-center font-sans">
             <p className="mb-10 text-6xl font-bold">Movie Recommendation System</p>
             <div className="links mb-10 text-2xl">
-                <span><a href="#paper">Report</a> | </span>
+                <span><a href={props.reportLink}>Report</a> | </span>
                 <span><a href="https://github.com/sahaniaditya/MovieRecommendationSystem">Code</a> | </span>
                 <span><a href="https://github.com/sahaniaditya/MovieRecommendationSystem/tree/main/dataset">Dataset</a> | </span>
                 <span><a href="https://github.com/sahaniaditya/MovieRecommendationSystem/tree/main/demo_website">Demonstration</a></span>

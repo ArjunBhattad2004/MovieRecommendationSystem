@@ -22,7 +22,7 @@ function App() {
 
   const acknowledgement = "This work is done as course project for the course Pattern Recognition and Machine Learning CSL[2050], IIT Jodhpur under Prof. Anand Mishra.";
 
-  const reportLink = "https://github.com/sahaniaditya/MovieRecommendationSystem/blob/main/PRML_PROJECT_Report.pdf";
+  const reportLink = "https://drive.google.com/file/d/1Gp-CGb7ZDTJkOTm91Nl3ND4mnYrbtArJ/view";
 
 
   return (
