@@ -1,9 +1,9 @@
 # MovieRecommendationSystem
 This project explores various machine learning techniques to develop a comprehensive movie recommendation system. We integrate content-based, collaborative filtering, and hybrid models to offer personalized movie recommendations tailored to individual user preferences.
 ## Team Members :
-- Aditya Sahani(B22CS003)
-- Raunak Singh(B22CS085)
 - Arjun Bhattad(B22AI051)
+- Raunak Singh(B22CS085)
+- Aditya Sahani(B22CS003)
 - Krishna Chaudhary(B22EE090)
   
 #### Demo Website : [Demo Website](https://movierecommendationsystem-nrpmzdwepthohlrlshxqpf.streamlit.app/)
