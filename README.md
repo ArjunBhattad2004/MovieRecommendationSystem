@@ -6,7 +6,7 @@ This project explores various machine learning techniques to develop a comprehen
 - Aditya Sahani(B22CS003)
 - Krishna Chaudhary(B22EE090)
   
-#### Demo Website : [Demo Website](https://movierecommendationsystem-nrpmzdwepthohlrlshxqpf.streamlit.app/)
+//#### Demo Website : [Demo Website](https://movierecommendationsystem-nrpmzdwepthohlrlshxqpf.streamlit.app/)
 #### Project Website : [Project Page](https://prml-project-page.netlify.app/)
 #### Report : [PRML_PROJECT_REPORT](https://drive.google.com/file/d/1Gp-CGb7ZDTJkOTm91Nl3ND4mnYrbtArJ/view?usp=sharing)
 #### Dataset : [Dataset Link](https://www.kaggle.com/datasets/shubhammehta21/movie-lens-small-latest-dataset)
