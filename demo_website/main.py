@@ -32,10 +32,10 @@ st.set_page_config(layout="wide")
 
 
 st.header('Movie Recommender System')
-movies = pickle.load(open('src/movierecommendationsystem/demo_website/movies.pkl','rb'))
-vector = pickle.load(open('src/movierecommendationsystem/demo_website/vector.pkl','rb'))
-links = pickle.load(open('src/movierecommendationsystem/demo_website/links.pkl','rb'))
-main = pickle.load(open('src/movierecommendationsystem/demo_website/main.pkl','rb'))
+movies = pickle.load(open('movies.pkl','rb'))
+vector = pickle.load(open('vector.pkl','rb'))
+links = pickle.load(open('links.pkl','rb'))
+main = pickle.load(open('main.pkl','rb'))
 similarity = cosine_similarity(vector)
 
 movie_list = movies['title'].values
